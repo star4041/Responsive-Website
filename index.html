@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Asignment - 1 Responsive Website</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+	</head>
+    <style>
+        body{
+            margin: 0px;
+            font-family: 'Darker Grotesque', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        container{
+            margin: 0;
+        }
+        
+       
+        
+        .logo{
+            float: left;   
+        }
+        
+        .logo img{
+            width: 20%;
+            height: 20%;
+            border: 2px solid red;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        
+        
+        .title{
+            padding: 200px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 70px;
+        }
+        
+        
+        #about{
+            width: 100%;
+            height: 750px;
+            
+        }
+        
+        #services{
+            margin: 0px;
+            width: 100%;
+            height: auto;
+            background: linear-gradient(to right, #7f00ff, #e100ff);
+            color:white !important;
+            font-weight: 500;
+        }
+        
+        .backimg{
+             background-image: url("https://www.wallpaperflare.com/static/639/20/977/mountains-night-snowy-mountain-wallpaper.jpg");
+             background-size:cover;
+             height: 750px;
+             width: 100%;
+        }
+        
+        .toggle{
+            float: right;
+            display: none;
+        }
+        
+        .toggle a{
+            text-decoration: none;
+            color: red;
+            font-size: 25px;
+            margin-left: 50px;
+        }
+        
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: #000000;
+            color: yellow;
+        }
+        
+        footer p{
+            padding: 20px;
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        .display-container{
+            position: relative;
+        }
+        
+        .content{
+            text-align: center;
+            padding: 50px;   
+            font-size: 25px;
+        }
+        
+        .content1{
+            text-align: justify;
+            margin-left: 250px;
+            margin-right: 250px;
+            font-size: 25px;
+        }
+        
+        .shead{
+            text-align: center;
+            padding: 20px;   
+            font-size: 25px;
+        }
+        
+        .serve{
+            margin: 0px;
+        }
+        
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .col{
+            width: 33.3%;  
+            float: left;
+            height: auto;
+            text-align: center;
+            
+        }   
+        
+        .col img{
+            width: 50%;
+            height: 50%;
+            border: 3px solid red;
+            border-radius: 15px;
+        }
+        
+        .col p{
+            text-align: justify;
+            padding: 50px;
+            font-size: 25px;
+        }
+        
+        @media  screen and (max-width:480px){
+            .toggle{
+                display: contents !important;
+            }
+        
+            .mitems{
+                display: none;
+            }        
+        }
+        
+        @media  screen and (max-width:1200px){
+            #about{
+                height: auto;
+            }
+            
+            .content{
+                padding: 25px;
+            }    
+            
+        .content1{
+                width: 90%;
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 1100px) {
+            .col{
+            width: 100%;
+            }
+        
+            .title{
+                padding: 60px;
+                font-size: 20px;
+            }
+        
+        }
+        
+        #close{
+            display: none;
+        }
+        
+        #show:target {
+            display:inline-grid;
+        }
+
+        
+#hamnav {
+  width: 100%;
+  background: #000;
+  opacity: 0.8;            
+  position: fixed;
+  top: 0;
+}
+
+
+#hamnav label, #hamburger { display: none; }
+
+
+#hamitems { display: flex; }
+#hamitems a {
+  width: 15%;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;    
+}
+#hamitems a:hover {
+  border-bottom: 2px solid red;
+}
+
+
+@media screen and (max-width: 768px){
+  #hamnav label { 
+    display: inline-block; 
+    color: white;
+    background: #000;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    margin-left: 60px;
+    margin-top: 10px;  
+  }
+
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+    padding: 20px;  
+  }
+    
+    
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+}       
+        
+    </style>    
+	<body>
+    <div class="container">    
+     <div class="backimg" id="home">
+         <nav id="hamnav">
+           <div class="logo">
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9NeDyGl8gEzBWcRKFzfaH8-7bEbTke7YAWg&usqp=CAU" alt="LOGO"></a>
+           </div>     
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+ 
+           <div id="hamitems">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            
+           </div>
+         </nav>
+        <div class="title">
+            <h1>Assignment 1 Responsive Website</h1>
+        </div>    
+         
+         
+     </div>   
+     <div id="about">
+         <div class="content">    
+         <h1>ABOUT</h1>
+         </div>    
+         <div class="content1">    
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+         </p>
+         </div>     
+     </div> 
+     <div id="services" class="serve">
+         <div class="shead">
+             <h1>SERVICES</h1>
+         </div>     
+     <div class="row">
+            <div class="col">
+                
+                <img src="https://media.istockphoto.com/vectors/web-development-optimization-user-experience-user-interface-in-vector-id1217177624?b=1&k=6&m=1217177624&s=612x612&w=0&h=okhKTvNYxfhHhStURJ2IXSb0zffz36P5IakhXwV2GG4=" alt="tile 1 img">
+                <h1>Tile1</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+         <div class="col">
+                
+                <img src="https://media.istockphoto.com/vectors/web-development-optimization-user-experience-user-interface-in-vector-id1217177624?b=1&k=6&m=1217177624&s=612x612&w=0&h=okhKTvNYxfhHhStURJ2IXSb0zffz36P5IakhXwV2GG4=" alt="tile 1 img">
+                <h1>Tile2</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+         <div class="col">
+                
+                <img src="https://media.istockphoto.com/vectors/web-development-optimization-user-experience-user-interface-in-vector-id1217177624?b=1&k=6&m=1217177624&s=612x612&w=0&h=okhKTvNYxfhHhStURJ2IXSb0zffz36P5IakhXwV2GG4=" alt="tile 1 img">
+                <h1>Tile3</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+     </div>
+     
+     <footer>
+         <p>&copy; 2021 Assigment - 1</p>
+     </footer>  
+    </div>    
+  </div>
+ </body>
+</html>
