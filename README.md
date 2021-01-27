@@ -1,2 +1,1 @@
-# assignment-1
-k1 front end Assignment - 1
+Responsive Website Template Using HTML, CSS and MediaQuery
